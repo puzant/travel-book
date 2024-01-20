@@ -1,4 +1,4 @@
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Text, Button, Pressable } from 'react-native';
 import styled from 'styled-components/native';
 
 export const AddNewTravelScreen = () => {
@@ -10,6 +10,9 @@ export const AddNewTravelScreen = () => {
         <Input placeholder="Country" />
         <Input placeholder="City" />
         <Input placeholder="Date" />
+        <StyledBtn onPress={() => navigation.navigate('Home')}>
+          <Text style={{ color: '#fff', textAlign: 'center' }}>Save</Text>
+        </StyledBtn>
       </View>
     </View>
   );
@@ -32,4 +35,10 @@ const Input = styled.TextInput`
   border-radius: 8px;
   padding: 8px;
   width: 100%;
+`;
+
+const StyledBtn = styled.Pressable`
+  background-color: #ec6142;
+  padding: 15px;
+  border-radius: 14px;
 `;
